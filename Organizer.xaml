@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage
+    x:Class="kysMaui.Organizer"
+    xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    Title="Organizer">
+    <VerticalStackLayout>
+        <Label
+            FontAttributes="Bold"
+            FontSize="32"
+            HorizontalOptions="Center"
+            SemanticProperties.HeadingLevel="Level1"
+            Text="Окно Организатора" />
+        <BoxView
+            Margin="0,20,0,0"
+            HeightRequest="1"
+            HorizontalOptions="FillAndExpand" />
+        <HorizontalStackLayout>
+            <VerticalStackLayout>
+                <Image Source="dotnet_bot.png" />
+                <Button Text="Мой профиль" />
+            </VerticalStackLayout>
+            <VerticalStackLayout>
+                <Label
+                    FontAttributes="Bold"
+                    HorizontalOptions="Center"
+                    Text="Доброе утро/день/вечер!" />
+                <Label
+                    FontAttributes="Bold"
+                    HorizontalOptions="Center"
+                    Text="Ms/Mrs Имя" />
+                <Button Text="Мероприятия" />
+                <Button Text="Участники" />
+                <Button Text="Жюри" />
+            </VerticalStackLayout>
+        </HorizontalStackLayout>
+    </VerticalStackLayout>
+</ContentPage>
