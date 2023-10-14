@@ -25,7 +25,7 @@
                     </Border>
                 </VerticalStackLayout>
             </Border>
-            <Border>
+            <Border Margin="10,0,0,0">
                 <Label Text="Описание Описание Описание Описание Описание Описание Описание Описание Описание Описание Описание Описание " />
             </Border>
         </HorizontalStackLayout>
