@@ -1,12 +1,37 @@
 <?xml version="1.0" encoding="utf-8" ?>
-<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
-             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-             x:Class="kysMaui.Authorization"
-             Title="Authorization">
-    <VerticalStackLayout>
-        <Label 
-            Text="Welcome to .NET MAUI!"
-            VerticalOptions="Center" 
-            HorizontalOptions="Center" />
+<ContentPage
+    x:Class="kysMaui.Authorization"
+    xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    Title="Authorization">
+    <VerticalStackLayout HorizontalOptions="Center" VerticalOptions="Center">
+        <Label
+            HorizontalOptions="Center"
+            Text="Авторизация"
+            VerticalOptions="Center" />
+        <HorizontalStackLayout HorizontalOptions="Center">
+            <Image MaximumHeightRequest="30" Source="key.png" />
+            <Entry
+                ClearButtonVisibility="WhileEditing"
+                HeightRequest="10"
+                Keyboard="Numeric"
+                MaxLength="50"
+                Placeholder="idNumber"
+                WidthRequest="300" />
+        </HorizontalStackLayout>
+        <HorizontalStackLayout HorizontalOptions="Center">
+            <Image MaximumHeightRequest="30" Source="user.png" />
+            <Entry
+                ClearButtonVisibility="WhileEditing"
+                HeightRequest="10"
+                IsPassword="True"
+                MaxLength="70"
+                Placeholder="password"
+                WidthRequest="300" />
+        </HorizontalStackLayout>
+        <Button
+            Clicked="Submit"
+            Text="Submit"
+            WidthRequest="300" />
     </VerticalStackLayout>
 </ContentPage>

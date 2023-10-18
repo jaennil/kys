@@ -6,4 +6,9 @@ public partial class Authorization : ContentPage
 	{
 		InitializeComponent();
 	}
+
+    private void Submit(object sender, EventArgs e)
+    {
+        App.Current.MainPage = new NavigationPage(new EventInfo());
+    }
 }
