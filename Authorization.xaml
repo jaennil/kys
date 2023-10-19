@@ -6,14 +6,12 @@
     xmlns:drawable="clr-namespace:kysMaui"
     Title="Authorization">
 
+
     <ContentPage.Resources>
         <drawable:Captcha x:Key="Captcha" />
     </ContentPage.Resources>
 
-    <VerticalStackLayout
-        x:Name="verticalStackLayout"
-        HorizontalOptions="Center"
-        VerticalOptions="Center">
+    <VerticalStackLayout HorizontalOptions="Center" VerticalOptions="Center">
         <Label
             HorizontalOptions="Center"
             Text="Авторизация"
@@ -43,13 +41,12 @@
             Text="Submit"
             WidthRequest="300" />
         <GraphicsView
-            x:Name="Canvas"
+            x:Name="graphicsView"
             Drawable="{StaticResource Captcha}"
             HeightRequest="100"
             HorizontalOptions="Fill" />
-        <Button
-            x:Name="RegenetareCaptcha"
-            Clicked="OnClickRegenetareCaptcha"
-            Text="Regenerate captcha" />
+        <Entry x:Name="captchaEntry" />
+        <Button Clicked="OnClickRegenetareCaptcha" Text="Regenerate captcha" />
+        <Button Clicked="OnSubmitCaptcha" Text="Submit captcha" />
     </VerticalStackLayout>
 </ContentPage>
