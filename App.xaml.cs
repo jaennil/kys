@@ -6,7 +6,7 @@
         {
             InitializeComponent();
 
-            MainPage = new myProfile();
+            MainPage = new createEvent();
         }
     }
 }

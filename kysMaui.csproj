@@ -57,6 +57,9 @@
 	  <MauiXaml Update="Authorization.xaml">
 	    <Generator>MSBuild:Compile</Generator>
 	  </MauiXaml>
+	  <MauiXaml Update="createEvent.xaml">
+	    <Generator>MSBuild:Compile</Generator>
+	  </MauiXaml>
 	  <MauiXaml Update="EventInfo.xaml">
 	    <Generator>MSBuild:Compile</Generator>
 	  </MauiXaml>
