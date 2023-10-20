@@ -19,7 +19,7 @@
         <HorizontalStackLayout HorizontalOptions="Center">
             <Image MaximumHeightRequest="30" Source="key.png" />
             <Entry
-            x:Name="idNumberEntry"
+                x:Name="idNumberEntry"
                 ClearButtonVisibility="WhileEditing"
                 HeightRequest="10"
                 Keyboard="Numeric"
@@ -30,7 +30,7 @@
         <HorizontalStackLayout HorizontalOptions="Center">
             <Image MaximumHeightRequest="30" Source="user.png" />
             <Entry
-            x:Name="passwordEntry"
+                x:Name="passwordEntry"
                 ClearButtonVisibility="WhileEditing"
                 HeightRequest="10"
                 IsPassword="True"
@@ -39,7 +39,7 @@
                 WidthRequest="300" />
         </HorizontalStackLayout>
         <Button
-        x:Name="submitButton"
+            x:Name="submitButton"
             Clicked="Submit"
             Text="Submit"
             WidthRequest="300" />
@@ -49,7 +49,17 @@
             HeightRequest="100"
             HorizontalOptions="Fill" />
         <Entry x:Name="captchaEntry" />
-        <Button x:Name="regenerateCaptchaButton" Clicked="OnClickRegenetareCaptcha" Text="Regenerate captcha" />
-        <Button x:Name="submitCaptchaButton" Clicked="OnSubmitCaptcha" Text="Submit captcha" />
+        <Button
+            x:Name="regenerateCaptchaButton"
+            Clicked="OnClickRegenetareCaptcha"
+            Text="Regenerate captcha" />
+        <Button
+            x:Name="submitCaptchaButton"
+            Clicked="OnSubmitCaptcha"
+            Text="Submit captcha" />
+        <HorizontalStackLayout HorizontalOptions="End">
+            <Label Text="Remember me: " VerticalOptions="Center" />
+            <CheckBox x:Name="rememberMeCheckBox" />
+        </HorizontalStackLayout>
     </VerticalStackLayout>
 </ContentPage>
