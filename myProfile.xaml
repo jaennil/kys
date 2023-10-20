@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage
+    x:Class="kysMaui.myProfile"
+    xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    Title="myProfile">
+    <VerticalStackLayout>
+        <Label
+            FontAttributes="Bold"
+            FontSize="32"
+            HorizontalOptions="Center"
+            Text="Мой профиль" />
+        <HorizontalStackLayout>
+            <VerticalStackLayout>
+                <Label HorizontalTextAlignment="End" Text="ФИО:" />
+                <Label HorizontalTextAlignment="End" Text="Пол:" />
+                <Label HorizontalTextAlignment="End" Text="Дата рождения:" />
+                <Label HorizontalTextAlignment="End" Text="Id Number:" />
+                <Label HorizontalTextAlignment="End" Text="Страна:" />
+                <Label HorizontalTextAlignment="End" Text="Телефон:" />
+                <Label HorizontalTextAlignment="End" Text="Email:" />
+            </VerticalStackLayout>
+            <VerticalStackLayout>
+                <Label Text="Li Zhi" />
+                <Label Text="Male" />
+                <Label Text="1995-01-02" />
+                <Label Text="12010119" />
+                <Label Text="Qing Hai ( 630000 )" />
+                <Label Text="13901088888" />
+                <Label Text="Worldskills@gmail.com" />
+            </VerticalStackLayout>
+            <VerticalStackLayout>
+                <Image Source="dotnet.png" />
+                <HorizontalStackLayout>
+                    <CheckBox x:Name="changePasswordCheckBox" />
+                    <Label Text="Смена пароля" VerticalOptions="Center" />
+                </HorizontalStackLayout>
+                <HorizontalStackLayout HorizontalOptions="End">
+                    <Label Text="Пароль:" />
+                    <Entry
+                        IsPassword="True"
+                        Placeholder="Password"
+                        WidthRequest="200" />
+                </HorizontalStackLayout>
+                <HorizontalStackLayout HorizontalOptions="End">
+                    <Label Text="Повтор пароля:" />
+                    <Entry
+                        IsPassword="True"
+                        Placeholder="Re-enter password"
+                        WidthRequest="200" />
+                </HorizontalStackLayout>
+                <HorizontalStackLayout>
+                    <CheckBox x:Name="passwordVisibleCheckBox" />
+                    <Label Text="Видимый пароль" VerticalOptions="Center" />
+                </HorizontalStackLayout>
+            </VerticalStackLayout>
+        </HorizontalStackLayout>
+    </VerticalStackLayout>
+</ContentPage>

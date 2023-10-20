@@ -6,7 +6,7 @@
         {
             InitializeComponent();
 
-            MainPage = new Authorization();
+            MainPage = new myProfile();
         }
     }
 }
