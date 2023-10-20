@@ -63,6 +63,9 @@
 	  <MauiXaml Update="EventInfo.xaml">
 	    <Generator>MSBuild:Compile</Generator>
 	  </MauiXaml>
+	  <MauiXaml Update="KanbanBoard.xaml">
+	    <Generator>MSBuild:Compile</Generator>
+	  </MauiXaml>
 	  <MauiXaml Update="myProfile.xaml">
 	    <Generator>MSBuild:Compile</Generator>
 	  </MauiXaml>
