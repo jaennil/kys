@@ -1,4 +1,4 @@
-namespace kysMaui;
+﻿namespace kysMaui;
 
 public partial class Authorization : ContentPage
 {
@@ -27,19 +27,30 @@ public partial class Authorization : ContentPage
         graphicsView.Invalidate();
     }
 
-    void OnSubmitCaptcha(object sender, EventArgs e)
+    async void OnSubmitCaptcha(object sender, EventArgs e)
     {
         if (captchaEntry.Text == captcha.Value)
         {
             validated = true;
+            return;
         }
-        else
-        {
-            validated = false;
-            // TODO: block the system for 10 sec
-            captcha.Generate();
-            graphicsView.Invalidate();
-            // TODO: let the user know that captcha is wrong
-        }
+
+        validated = false;
+        EnableUI(false);
+        await DisplayAlert("Предупреждение", "Вы ввели неправильную капчу. Следующая попытка будет доступна через 10 секунд", "OK");
+        await Task.Delay(10000);
+        EnableUI(true);
+        captcha.Generate();
+        graphicsView.Invalidate();
+    }
+
+    void EnableUI(bool value)
+    {
+        idNumberEntry.IsEnabled = value;
+        passwordEntry.IsEnabled = value;
+        submitButton.IsEnabled = value;
+        captchaEntry.IsEnabled = value;
+        regenerateCaptchaButton.IsEnabled = value;
+        submitCaptchaButton.IsEnabled = value;
     }
 }
